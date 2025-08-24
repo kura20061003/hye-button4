@@ -1,0 +1,161 @@
+body {
+  background: #000;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+#lapHistory {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.9rem;
+  background-color: rgba(30, 30, 30, 0.85);
+  padding: 10px;
+  border-radius: 8px;
+  color: #ccc;
+  max-width: 300px;
+  line-height: 1.4;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+.container {
+  text-align: center;
+  background-color: #111;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+#hyeButton {
+  background: #ff4747;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  box-shadow: 0 8px #cc0000;
+  transition: all 0.1s ease;
+}
+
+#hyeButton:active {
+  transform: translateY(5px);
+  box-shadow: 0 3px #990000;
+}
+
+#hyeButton:disabled {
+  background: #444;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+#counter {
+  margin-top: 20px;
+  font-size: 1.8rem;
+  color: #ff6666;
+  text-shadow: 0 0 5px #ff0000;
+}
+
+#lapDisplay {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.buttonGroup {
+  margin-top: 20px;
+}
+
+.buttonGroup button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttonGroup button:hover {
+  background-color: #555;
+}
+#whatTimeButton {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: #f1c40f;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#whatTimeButton::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(241, 196, 15, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+#whatTimeButton:active::after {
+  width: 200px;
+  height: 200px;
+}
+
+#whatTimeButton:hover {
+  background: linear-gradient(135deg, #34495e, #2c3e50);
+  color: #fff;
+}
+@media screen and (max-width: 600px) {
+  .bigButton {
+    width: 80vw;
+    height: 80vw;
+    font-size: 1.5rem;
+    border-radius: 20px;
+  }
+
+  #counter,
+  #whatCounter,
+  #lapDisplay {
+    font-size: 1.2rem;
+  }
+
+  .buttonGroup button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  #lapHistory {
+    font-size: 0.8rem;
+    max-width: 90vw;
+  }
+}
+.bigButton {
+  width: 150px;
+  height: 150px;
+  font-size: 2rem;
+  border-radius: 50%;
+  /* その他のスタイルはここに */
+}
